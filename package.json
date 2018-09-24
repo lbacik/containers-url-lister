@@ -1,0 +1,30 @@
+{
+  "name": "containers-url-lister",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://github.com/lbacik/containers-url-lister",
+  "license": "GPL-3.0-or-later",
+  "author": "Lukasz Bacik <mail@luka.sh> (http://luka.sh/)",
+  "main": "src/server.js",
+  "dependencies": {
+    "dockerode": "^2.5.7",
+    "express": "^4.16.3",
+    "npm": "^6.4.1",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "rewire": "^4.0.1",
+    "sinon": "^6.3.4"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha tests",
+    "start": "node src/server.js",
+    "develop": "node_modules/.bin/nodemon src/server.js"
+  }
+}

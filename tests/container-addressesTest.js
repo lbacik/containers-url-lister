@@ -58,7 +58,7 @@ describe('Containers addresses', () => {
   ]
 
   data.forEach((testData, index) => {
-    it(`test ${index + 1}`, () => {
+    it(`test ${index + 1}`, async () => {
       const stub = sinon.createStubInstance(Docker, {
         listContainers: Promise.resolve(testData.containers),
       })
@@ -69,8 +69,9 @@ describe('Containers addresses', () => {
 
       addresses.__set__('docker', stub)
 
-      addresses()
-        .then(list => expect(list).to.eql(testData.result))
+      const result = await addresses()
+
+      expect(result).to.eql(testData.result)
     })
   })
 })

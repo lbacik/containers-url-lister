@@ -1,8 +1,12 @@
 const Docker = require('dockerode');
 
-const docker = new Docker({ socketPath: '/var/run/docker.sock' });
+require('dotenv').load()
 
-const variableContainsHostNames = 'VIRTUAL_HOST'
+const docker = new Docker({
+  socketPath: process.env.DOCKER_SOCKET_PATH || '/var/run/docker.sock',
+});
+
+const variableContainsHostNames = process.env.VARIABLE_CONTAINS_HOST_NAMES || 'VIRTUAL_HOST'
 
 function getContainerAddresses(containerId) {
   return docker

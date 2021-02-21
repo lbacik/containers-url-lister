@@ -7,20 +7,19 @@
   "author": "Lukasz Bacik <mail@luka.sh> (http://luka.sh/)",
   "main": "src/server.js",
   "dependencies": {
-    "dockerode": "^2.5.7",
+    "dockerode": "^3.2.1",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "npm": "^6.4.1",
-    "pug": "^2.0.3"
+    "pug": "^3.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.18.4",
-    "rewire": "^4.0.1",
+    "mocha": "^8.3.0",
+    "nodemon": "^2.0.7",
+    "rewire": "^5.0.0",
     "sinon": "^6.3.4"
   },
   "scripts": {
